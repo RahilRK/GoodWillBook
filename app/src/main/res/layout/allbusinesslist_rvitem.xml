@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mwhite"
+    >
+
+    <RelativeLayout
+        android:id="@+id/activebusinesslo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activebusinessicon"
+            android:layout_width="@dimen/margin40"
+            android:layout_height="?android:attr/actionBarSize"
+            android:src="@mipmap/ic_launcher_round"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"/>
+
+
+
+        <RadioButton
+            android:id="@+id/activehomebusinessname"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:layout_toEndOf="@id/activebusinessicon"
+            android:textSize="@dimen/testSize16"
+            android:button="@drawable/radiobt_selector"
+            android:textColor="@color/mblack"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:text="@string/business_name"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Verification"
+    android:orientation="vertical"
+    android:background="@color/mwhite">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin20">
+
+    <com.infideap.blockedittext.BlockEditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bet_cardIconSize="48dp"
+        app:bet_cardPrefix="Mastercard|Visa"
+        app:bet_defaultLength="1"
+        app:bet_shiftPosition="false"
+        app:bet_hint="@string/enter_otp"
+        app:bet_inputType="Integer"
+        app:bet_numberOfBlock="6" />
+
+    <TextView
+        android:id="@+id/tvtimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timer"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/margin10"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verifyotpbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="@string/verify_otp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resendotpbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="@string/resend_otp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progresslo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/progresslo_bgcolor">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/mblack" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

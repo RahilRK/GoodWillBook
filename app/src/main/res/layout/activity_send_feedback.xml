@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                app:title="@string/feedback"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            android:layout_marginStart="@dimen/margin15"
+            android:layout_marginEnd="@dimen/margin15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin15"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivfeedbackimg"
+                        android:layout_width="@dimen/margin100"
+                        android:layout_height="@dimen/margin100"
+                        android:layout_marginStart="2.5dp"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginEnd="2.5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_gallery" />
+
+                    <ImageView
+                        android:id="@+id/ivdelete"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:background="@color/mwhite"
+                        android:layout_alignBottom="@id/ivfeedbackimg"
+                        android:layout_alignEnd="@id/ivfeedbackimg"
+                        android:layout_marginStart="@dimen/margin25"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_delete"/>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/shortdesctlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/short_description"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_short_desc"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/shortdesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/longdesctlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/long_description"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_long_desc"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="200"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/longdesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin100"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:gravity="top"
+                        android:maxLength="100"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/sendfeedbackbt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/send"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

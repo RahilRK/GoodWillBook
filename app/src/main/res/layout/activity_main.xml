@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite"
+            android:visibility="gone">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            >
+
+            <RelativeLayout
+                android:id="@+id/activebusinesslo"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/activebusinessicon"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="@dimen/margin40"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/activehomebusinessname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/activebusinessicon"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/testSize16"
+                    android:textColor="@color/mblack"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:text="@string/business_name"/>
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            >
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin60"
+                android:layout_gravity="bottom"
+                android:elevation="@dimen/margin5"
+                />
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

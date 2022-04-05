@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgraytoo"
+    tools:context=".MainActivity.MainActivity"
+    >
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeReferesh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mwhite">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="?android:attr/actionBarSize">
+
+
+                        <ImageView
+                            android:id="@+id/iv"
+                            android:layout_width="@dimen/margin40"
+                            android:layout_height="@dimen/margin40"
+                            android:src="@mipmap/ic_launcher_round"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/iv"
+                            android:layout_centerInParent="true"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/testSize16"
+                            android:textColor="@color/mblack"
+                            android:layout_marginStart="@dimen/margin10"
+                            android:text="@string/name"/>
+
+                    </RelativeLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/appbar"
+                android:id="@+id/mainlo">
+
+                <LinearLayout
+                    android:id="@+id/toplo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/margin20">
+
+                    <TextView
+                        android:id="@+id/tvgotgive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mgray"
+                        android:textSize="@dimen/testSize16"
+                        android:fontFamily="@font/app_font_bold"
+                        android:padding="@dimen/margin5"
+                        android:text="@string/you_gave"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mred"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/testSize25"
+                            android:textAlignment="center"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/app_font_bold"
+                            android:padding="@dimen/margin5"
+                            android:text="@string/_100"/>
+
+                        <ImageView
+                            android:id="@+id/ivapproved"
+                            android:layout_width="@dimen/margin20"
+                            android:layout_height="@dimen/margin20"
+                            app:srcCompat="@drawable/ic_approved"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            android:layout_toEndOf="@id/amount"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/paybtlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="@dimen/margin30"
+                    android:background="@color/mwhite"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin5"
+                    app:cardCornerRadius="@dimen/margin30"
+                    android:layout_marginBottom="-15dp"
+                    android:layout_below="@id/toplo"
+                    >
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin20">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/iv7"
+                                    android:layout_width="@dimen/margin25"
+                                    android:layout_height="@dimen/margin25"
+                                    android:layout_centerVertical="true"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:srcCompat="@drawable/ic_business" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin20"
+                                    android:layout_toEndOf="@id/iv7"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:text="@string/business_name"
+                                        android:textColor="@color/mgray"
+                                        android:textSize="@dimen/testSize16"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/businessname"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin5"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:hint="@string/notavailable"
+                                        android:textColor="@color/mblack"
+                                        android:textColorHint="@color/mblack"
+                                        android:textSize="@dimen/testSize14"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin30">
+
+                                <ImageView
+                                    android:id="@+id/iv1"
+                                    android:layout_width="@dimen/margin25"
+                                    android:layout_height="@dimen/margin25"
+                                    android:layout_centerVertical="true"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:srcCompat="@drawable/ic_calendar" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin20"
+                                    android:layout_toEndOf="@id/iv1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:text="@string/given_at"
+                                        android:textColor="@color/mgray"
+                                        android:textSize="@dimen/testSize16"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/debitdatetime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin5"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:hint="@string/notavailable"
+                                        android:textColor="@color/mblack"
+                                        android:textColorHint="@color/mblack"
+                                        android:textSize="@dimen/testSize14"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin30">
+
+                                <ImageView
+                                    android:id="@+id/iv2"
+                                    android:layout_width="@dimen/margin25"
+                                    android:layout_height="@dimen/margin25"
+                                    android:layout_centerVertical="true"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:srcCompat="@drawable/ic_location" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin20"
+                                    android:layout_toEndOf="@id/iv2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:text="@string/given_location"
+                                        android:textColor="@color/mgray"
+                                        android:textSize="@dimen/testSize16"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/debitlocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin5"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:hint="@string/tap_here_to_view_location_on_map"
+                                        android:textColor="@color/mblack"
+                                        android:textColorHint="@color/mblack"
+                                        android:textSize="@dimen/testSize14"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/approvedlo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin30">
+
+                                    <ImageView
+                                        android:id="@+id/iv3"
+                                        android:layout_width="@dimen/margin25"
+                                        android:layout_height="@dimen/margin25"
+                                        android:layout_centerVertical="true"
+                                        android:tint="@color/colorPrimaryDark"
+                                        app:srcCompat="@drawable/ic_calendar" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/margin20"
+                                        android:layout_toEndOf="@id/iv3"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/app_font_bold"
+                                            android:text="@string/appoved_at"
+                                            android:textColor="@color/mgray"
+                                            android:textSize="@dimen/testSize16"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/creditdatetime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/margin5"
+                                            android:fontFamily="@font/app_font_bold"
+                                            android:hint="@string/notavailable"
+                                            android:textColor="@color/mblack"
+                                            android:textColorHint="@color/mblack"
+                                            android:textSize="@dimen/testSize14"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin30">
+
+                                    <ImageView
+                                        android:id="@+id/iv4"
+                                        android:layout_width="@dimen/margin25"
+                                        android:layout_height="@dimen/margin25"
+                                        android:layout_centerVertical="true"
+                                        android:tint="@color/colorPrimaryDark"
+                                        app:srcCompat="@drawable/ic_location" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/margin20"
+                                        android:layout_toEndOf="@id/iv4"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/app_font_bold"
+                                            android:text="@string/approved_location"
+                                            android:textColor="@color/mgray"
+                                            android:textSize="@dimen/testSize16"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/creditlocation"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/margin5"
+                                            android:fontFamily="@font/app_font_bold"
+                                            android:hint="@string/tap_here_to_view_location_on_map"
+                                            android:textColor="@color/mblack"
+                                            android:textColorHint="@color/mblack"
+                                            android:textSize="@dimen/testSize14"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin30">
+
+                                <ImageView
+                                    android:id="@+id/iv5"
+                                    android:layout_width="@dimen/margin25"
+                                    android:layout_height="@dimen/margin25"
+                                    android:layout_centerVertical="true"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:srcCompat="@drawable/ic_remark" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin20"
+                                    android:layout_toEndOf="@id/iv5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:text="@string/remark"
+                                        android:textColor="@color/mgray"
+                                        android:textSize="@dimen/testSize16"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/remark"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin5"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:hint="@string/notavailable"
+                                        android:textColor="@color/mblack"
+                                        android:textColorHint="@color/mblack"
+                                        android:textSize="@dimen/testSize14"
+                                        android:textStyle="bold"
+                                        />
+
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin30">
+
+                                <ImageView
+                                    android:id="@+id/iv6"
+                                    android:layout_width="@dimen/margin25"
+                                    android:layout_height="@dimen/margin25"
+                                    android:layout_centerVertical="true"
+                                    android:tint="@color/colorPrimaryDark"
+                                    app:srcCompat="@drawable/ic_attachment" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/margin20"
+                                    android:layout_toEndOf="@id/iv6"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:text="@string/attachments"
+                                        android:textColor="@color/mgray"
+                                        android:textSize="@dimen/testSize16"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/attachment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin5"
+                                        android:fontFamily="@font/app_font_bold"
+                                        android:hint="@string/notavailable"
+                                        android:textColor="@color/mblack"
+                                        android:textColorHint="@color/mblack"
+                                        android:textSize="@dimen/testSize14"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/approvebt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mblack"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin30"
+                                app:icon="@drawable/ic_approved"
+                                android:textStyle="bold"
+                                app:rippleColor="@color/mgreen"
+                                app:iconTint="@color/mgreen"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:text="@string/approve"/>
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/progresslo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:background="@color/progresslo_bgcolor">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    style="@style/SpinKitView.Wave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:SpinKit_Color="@color/mblack" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

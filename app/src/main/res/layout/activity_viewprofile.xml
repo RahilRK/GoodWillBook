@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/mwhite"
+    tools:context=".Profile.Viewprofile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin10"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="@dimen/margin20">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin5"
+                    android:background="@color/colorGrey"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/testSize25"
+                    android:textColor="@color/mblack"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/app_font_bold"
+                    android:text="@string/name"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin5"
+                    android:background="@color/colorGrey"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin20">
+
+                <ImageView
+                    android:id="@+id/editiv"
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_phone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin20"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/editiv">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/mobile_number"
+                        />
+
+                    <TextView
+                        android:id="@+id/mobilenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/notavailable"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin20">
+
+                <ImageView
+                    android:id="@+id/emailiv"
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_at"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin20"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/emailiv">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/emailid"
+                        />
+
+                    <TextView
+                        android:id="@+id/emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/notavailable"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                app:title="@string/tap_to_zoom"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/appbar">
+
+<!--            <com.jsibbold.zoomage.ZoomageView-->
+<!--                android:id="@+id/myZoomageView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@mipmap/ic_launcher"-->
+<!--                app:zoomage_restrictBounds="false"-->
+<!--                app:zoomage_animateOnReset="true"-->
+<!--                app:zoomage_autoResetMode="UNDER"-->
+<!--                app:zoomage_autoCenter="true"-->
+<!--                app:zoomage_zoomable="true"-->
+<!--                app:zoomage_translatable="true"-->
+<!--                app:zoomage_minScale="0.6"-->
+<!--                app:zoomage_maxScale="8"-->
+<!--                />-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

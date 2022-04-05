@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgraytoo">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite"
+            android:layout_alignParentTop="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/activebusinesslo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/activebusinessicon"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="@dimen/margin40"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/activehomebusinessname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/activebusinessicon"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mblack"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/business_name"/>
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/mainlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/appbar"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paybtlo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin30"
+                android:background="@color/mwhite"
+                app:cardCornerRadius="@dimen/margin15"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginEnd="@dimen/margin5"
+                android:layout_marginStart="@dimen/margin5"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2.5"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mblack"
+                            android:textSize="@dimen/testSize16"
+                            android:fontFamily="@font/app_font_bold"
+                            android:textAlignment="center"
+                            android:padding="@dimen/margin5"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:text="@string/will_receive"/>
+
+
+                        <TextView
+                            android:id="@+id/tvamountreceive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mgreen"
+                            android:textSize="@dimen/testSize18"
+                            android:textAlignment="center"
+                            android:padding="@dimen/margin5"
+                            android:fontFamily="@font/app_font_bold"
+                            android:text="@string/_100"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin3"
+                        android:background="@color/colorGrey"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2.5"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mblack"
+                            android:textSize="@dimen/testSize16"
+                            android:fontFamily="@font/app_font_bold"
+                            android:textAlignment="center"
+                            android:padding="@dimen/margin5"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:text="@string/to_give"/>
+
+                        <TextView
+                            android:id="@+id/tvamountgive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mred"
+                            android:textSize="@dimen/testSize18"
+                            android:textAlignment="center"
+                            android:padding="@dimen/margin5"
+                            android:fontFamily="@font/app_font_bold"
+                            android:text="@string/_50"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvremovefilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/testSize16"
+                    android:textColor="@color/mred"
+                    android:text="@string/remove_filter"
+                    android:visibility="gone"
+                    android:padding="@dimen/margin10"
+                    android:fontFamily="@font/app_font_bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin5"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/nodatafoundlo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/nodatafoundiv"
+                android:layout_width="@dimen/margin80"
+                android:layout_height="@dimen/margin80"
+                app:srcCompat="@drawable/ic_notransactionfound"
+                android:tint="@color/mgray"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_transaction_occured"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/mgray"
+                android:fontFamily="@font/app_font_bold"
+                android:textSize="@dimen/testSize18"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_below="@id/nodatafoundiv"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout
+        xmlns:rfal="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fabmenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        rfal:rfal_frame_color="#ffffff"
+        rfal:rfal_frame_alpha="0"
+        >
+        <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton
+            xmlns:rfab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fabmenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="8dp"
+            rfab:rfab_size="normal"
+            rfab:rfab_drawable="@drawable/rfab__drawable_rfab_default"
+            rfab:rfab_color_normal="#212121"
+            rfab:rfab_color_pressed="#263238"
+            rfab:rfab_shadow_radius="7dp"
+            rfab:rfab_shadow_color="@color/mwhite"
+            rfab:rfab_shadow_dx="0dp"
+            rfab:rfab_shadow_dy="0dp"
+            />
+    </com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

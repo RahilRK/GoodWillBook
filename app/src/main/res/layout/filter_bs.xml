@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin15"
+        android:paddingBottom="@dimen/margin15"
+        android:paddingStart="@dimen/margin5"
+        android:paddingEnd="@dimen/margin5"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/testSize16"
+            android:textColor="@color/mblack"
+            android:text="@string/choose_from_below"
+            android:layout_toStartOf="@+id/tvremovefilter"
+            android:layout_marginStart="@dimen/margin10"/>
+
+        <TextView
+            android:id="@+id/tvremovefilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/testSize16"
+            android:textColor="@color/mred"
+            android:text="@string/remove_filter"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin10"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="@dimen/margin5"
+        android:background="@color/colorGrey"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroupfilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin15">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobthightolo"
+            android:text="@string/amount_high_to_low"
+            android:button="@null"
+            android:textStyle="bold"
+            android:textColor="@drawable/radiobuttonstate"
+            android:textSize="@dimen/testSize18">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtlowtohigh"
+            android:text="@string/amount_low_to_high"
+            android:button="@null"
+            android:textStyle="bold"
+            android:textColor="@drawable/radiobuttonstate"
+            android:textSize="@dimen/testSize18">
+        </RadioButton>
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtdate"
+            android:text="@string/date"
+            android:button="@null"
+            android:textStyle="bold"
+            android:textColor="@drawable/radiobuttonstate"
+            android:textSize="@dimen/testSize18">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtdaterange"
+            android:text="@string/date_range"
+            android:button="@null"
+            android:textStyle="bold"
+            android:textColor="@drawable/radiobuttonstate"
+            android:textSize="@dimen/testSize18">
+        </RadioButton>
+    </RadioGroup>
+</LinearLayout>

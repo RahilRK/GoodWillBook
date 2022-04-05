@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".BusinessInfo.Businessinfo">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingtoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/mwhite"
+                android:background="@color/mwhite"
+                app:title="@string/business_name"
+                app:expandedTitleTextAppearance="@style/ExpandedCollapsedToolbarStyle"
+                app:collapsedTitleTextAppearance="@style/CollapsedToolbarStyle"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/businesslogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"/>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:background="@color/toolbarTransparent"/>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_addimage"
+            android:tint="@android:color/white"
+            app:layout_anchor="@id/appbar"
+            app:backgroundTint="@color/colorPrimary"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/fab"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin40"
+                android:layout_marginStart="@dimen/margin15"
+                android:layout_marginEnd="@dimen/margin15"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/businessnametlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/business_name"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_business_name"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/businessname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/businesscontactnotlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contact_number"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_business_contactno"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:prefixText="+91"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_marginTop="@dimen/margin15"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/businesscontactno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin15">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/emailid"
+                        />
+
+                    <TextView
+                        android:id="@+id/businessemailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:hint="@string/tap_here_to_choose_emailid"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pancardnumbertlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pan_card_number"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_business_pancard_no"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pancardnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:textAllCaps="true"
+                        android:maxLength="10"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/detailtlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/detail"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_business_detail"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="100"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addresstlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_business_address"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="200"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin100"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:gravity="top"
+                        android:maxLength="200"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/updatebusinessinfobt"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:text="@string/update"
+                    android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/progresslo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/progresslo_bgcolor">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/mblack" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

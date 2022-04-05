@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin3"
+        app:srcCompat="@drawable/ic_filter"/>
+
+    <ImageView
+        android:id="@+id/ivfilterdone"
+        android:layout_width="@dimen/margin10"
+        android:layout_height="@dimen/margin10"
+        android:layout_toEndOf="@id/ivfilter"
+        android:layout_marginStart="-5dp"
+        android:visibility="gone"
+        android:src="@drawable/circledot_red"/>
+
+</RelativeLayout>

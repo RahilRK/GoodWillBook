@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mwhite"
+    android:padding="@dimen/margin10"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                >
+
+                <LinearLayout
+                    android:id="@+id/lo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@id/lo2">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mblack"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/name"/>
+
+                    <TextView
+                        android:id="@+id/viewprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:layout_marginTop="@dimen/margin3"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/view_detail"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/myqrcode"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_marginEnd="@dimen/margin15"
+                        app:srcCompat="@drawable/ic_myqr_code"/>
+
+                    <ImageView
+                        android:id="@+id/creditscore"
+                        android:layout_width="@dimen/margin35"
+                        android:layout_height="@dimen/margin35"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_creditscore"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/colorGrey"/>
+
+            <TextView
+                android:id="@+id/viewbusinessinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/business_info"/>
+
+            <TextView
+                android:id="@+id/addnewbusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/add_business"/>
+
+            <TextView
+                android:id="@+id/generatereport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/generate_report"/>
+
+            <TextView
+                android:id="@+id/viewremainder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/view_reminder"/>
+
+            <TextView
+                android:id="@+id/createapplock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/app_lock"/>
+
+            <TextView
+                android:id="@+id/managetransactionpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/manage_transaction_password"/>
+
+            <TextView
+                android:id="@+id/notification_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/notification_settings"/>
+
+
+            <TextView
+                android:id="@+id/sendfeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/send_us_feedback"/>
+
+            <TextView
+                android:id="@+id/faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/faq"/>
+
+            <TextView
+                android:id="@+id/tandc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/terms_and_conditions"/>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/testSize16"
+                android:textColor="@color/mblack"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin10"
+                android:text="@string/logout"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progresslo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/progresslo_bgcolor">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/mblack" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

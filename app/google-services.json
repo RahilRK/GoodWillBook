@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "772032936046",
+    "firebase_url": "https://goodwill-book.firebaseio.com",
+    "project_id": "goodwill-book",
+    "storage_bucket": "goodwill-book.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772032936046:android:f66b55cb60caa867338e7f",
+        "android_client_info": {
+          "package_name": "com.hksofttronix.goodwillbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772032936046-ei5rirr4eugk858c1sc8hava19tvpgjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hksofttronix.goodwillbook",
+            "certificate_hash": "36ce9bb1fb78c73a5adaa3cdc20b913ce2832162"
+          }
+        },
+        {
+          "client_id": "772032936046-gfpcbb0qp94asqr65b5qugkea33d8tfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjY0x6DLsUjgq8wrODmKeA5SOsNte1PdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772032936046-gfpcbb0qp94asqr65b5qugkea33d8tfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    6c5ce7-->
+    <color name="colorPrimary">#f6784a</color>
+    <color name="colorPrimaryDark">#f79b59</color>
+    <color name="colorAccent">#f6784a</color>
+
+    <color name="lightgraytoo">#f9f7f7</color>
+
+    <color name="progresslo_bgcolor">#30000000</color>
+
+
+    <color name="mblack">#212121</color>
+    <color name="mwhite">#FFFFFF</color>
+    <color name="mgray">#9E9E9E</color>
+    <color name="mred">#F44336</color>
+    <color name="mgreen">#00c853</color>
+    <color name="toolbarTransparent">#00FFFFFF</color>
+
+    <color name="colorGrey">#dddddd</color>
+</resources>

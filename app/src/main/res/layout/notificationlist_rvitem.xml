@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mwhite"
+    >
+
+    <RelativeLayout
+        android:id="@+id/detail_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5">
+
+        <RelativeLayout
+            android:id="@+id/imageviewlo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleiv"
+                android:layout_width="@dimen/margin45"
+                android:layout_height="@dimen/margin45"
+                android:layout_marginStart="@dimen/margin15"
+                android:background="@mipmap/ic_launcher_round" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin15"
+            android:layout_toEndOf="@id/imageviewlo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="₹ 30 received from Karim, tap here for more detail!"
+                android:textColor="@color/mblack"
+                android:textSize="@dimen/testSize16"
+                android:padding="@dimen/margin5"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin10">
+
+
+                <TextView
+                    android:id="@+id/senddatetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mgray"
+                    android:textSize="@dimen/testSize14"
+                    android:gravity="end"
+                    android:layout_toStartOf="@id/readiv"
+                    android:text="@string/tempdatetime"/>
+
+                <ImageView
+                    android:id="@+id/readiv"
+                    android:layout_width="@dimen/margin10"
+                    android:layout_height="@dimen/margin10"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/circledot_red"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/margin70"
+        android:layout_marginTop="@dimen/margin5"
+        android:background="@color/colorGrey"/>
+
+</LinearLayout>

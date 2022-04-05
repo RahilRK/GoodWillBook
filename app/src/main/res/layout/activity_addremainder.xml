@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize">
+
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="@dimen/margin40"
+                        android:layout_height="@dimen/margin40"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mblack"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/name"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin15"
+                >
+
+                <LinearLayout
+                    android:id="@+id/choosedate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/choose_date"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:hint="@string/tap_here_to_choose_date"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/choosetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/choose_time"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:hint="@string/tap_here_to_choose_time"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/setremainderbt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/set_remainder"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

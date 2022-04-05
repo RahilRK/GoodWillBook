@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/mwhite"
+    tools:context=".Profile.Viewprofile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            >
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ImageView
+            android:id="@+id/ivqrcode"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivqrcode"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_marginStart="@dimen/margin15"
+            android:layout_marginEnd="@dimen/margin15"
+            android:textColor="@color/mblack"
+            android:textSize="@dimen/testSize16"
+            android:textAlignment="center"
+            android:text="@string/myqrcodehint"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabqrscanner"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/mwhite"
+        app:srcCompat="@drawable/ic_myqr_code_scanner"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgraytoo"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize">
+
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="@dimen/margin40"
+                        android:layout_height="@dimen/margin40"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/creditname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mblack"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/name"/>
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/appbar"
+            >
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeReferesh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/paybtlo"/>
+
+                <RelativeLayout
+                    android:id="@+id/nodatafoundlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_above="@id/paybtlo">
+
+                    <ImageView
+                        android:id="@+id/nodatafoundiv"
+                        android:layout_width="@dimen/margin80"
+                        android:layout_height="@dimen/margin80"
+                        app:srcCompat="@drawable/ic_notransactionfound"
+                        android:tint="@color/mgray"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_transaction_occured"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/mgray"
+                        android:fontFamily="@font/app_font_bold"
+                        android:textSize="@dimen/testSize18"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_below="@id/nodatafoundiv"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/paybtlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="@dimen/margin30"
+                    android:background="@color/mwhite"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin5"
+                    app:cardCornerRadius="@dimen/margin15"
+                    android:layout_marginBottom="-15dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvgeneratepdf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mblack"
+                                android:padding="@dimen/margin5"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/testSize14"
+                                android:text="@string/generate_pdf"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/margin3"
+                                android:layout_marginEnd="@dimen/margin3"
+                                android:layout_toEndOf="@id/tvgeneratepdf"
+                                android:layout_toStartOf="@id/tvsetremainder"
+                                android:padding="@dimen/margin15">
+
+                                <TextView
+                                    android:id="@+id/tvgivereceive"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/mblack"
+                                    android:fontFamily="@font/app_font_bold"
+                                    android:textSize="@dimen/testSize16"
+                                    android:textAlignment="center"
+                                    android:text="@string/will_receive"/>
+
+                                <TextView
+                                    android:id="@+id/tvgivereceiveamount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/mgreen"
+                                    android:fontFamily="@font/app_font_bold"
+                                    android:textSize="@dimen/testSize16"
+                                    android:layout_marginTop="@dimen/margin10"
+                                    android:textAlignment="center"
+                                    android:text="@string/_100"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvsetremainder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/mblack"
+                                android:padding="@dimen/margin5"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="@dimen/testSize14"
+                                android:text="@string/set_remainder"/>
+
+                        </RelativeLayout>
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/paybt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pay"
+                            android:layout_marginStart="@dimen/margin5"
+                            android:layout_marginEnd="@dimen/margin5"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/testSize18"
+                            android:padding="@dimen/margin10"
+                            android:fontFamily="@font/app_font_bold"
+                            android:textColor="@color/mwhite"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

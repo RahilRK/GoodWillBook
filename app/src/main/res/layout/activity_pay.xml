@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mwhite"
+    tools:context=".MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mwhite">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="@dimen/margin40"
+                        android:layout_height="@dimen/margin40"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/creditname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mblack"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="@string/name"/>
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin15"
+                >
+
+                <LinearLayout
+                    android:id="@+id/businessspinnerlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/app_font_bold"
+                    android:text="@string/choose_business"
+                    android:textColor="@color/mgray"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:textSize="@dimen/testSize16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/mwhite">
+
+                    <Spinner
+                        android:id="@+id/business_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amounttlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/amount"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_amount_to_pay"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="5"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/remarktlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/remark"
+                    app:boxBackgroundColor="@color/mwhite"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_remark"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="200"
+                    android:layout_marginTop="@dimen/margin15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin100"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:gravity="top"
+                        android:maxLength="100"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/choosedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin15"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/testSize16"
+                            android:textColor="@color/mgray"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/app_font_bold"
+                            android:text="@string/choose_date"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/testSize14"
+                            android:textColor="@color/mblack"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:fontFamily="@font/app_font_bold"
+                            android:hint="@string/tap_here_to_choose_date"
+                            android:textColorHint="@color/mblack"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/choosetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin15"
+                        android:layout_alignParentEnd="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/testSize16"
+                            android:textColor="@color/mgray"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/app_font_bold"
+                            android:text="@string/choose_time"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvtime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/testSize14"
+                            android:textColor="@color/mblack"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:fontFamily="@font/app_font_bold"
+                            android:hint="@string/tap_here_to_choose_time"
+                            android:textColorHint="@color/mblack"
+                            />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_attachmentlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin15">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/app_font_bold"
+                        android:text="@string/attach_photo"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/testSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:fontFamily="@font/app_font_bold"
+                        android:hint="@string/tap_here_to_choose_photo"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin15"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/paybt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/pay"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progresslo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/progresslo_bgcolor">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:SpinKit_Color="@color/mblack" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

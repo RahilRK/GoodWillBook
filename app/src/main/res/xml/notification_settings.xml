@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <PreferenceCategory
+       android:title="Select notification ringtone">
+
+      <Preference
+          android:key="amountreceivedsoundkey"
+          android:title="Select sound"
+          android:summary="Choose notification sound by tapping here!"
+          />
+
+   </PreferenceCategory>
+
+
+   <PreferenceCategory
+       android:title="Transaction amount received">
+
+      <SwitchPreferenceCompat
+          android:key="amountreceivedkey"
+          android:title=""
+          android:summary="Toggle to turn ON/OFF for transaction amount received notification sound"
+          android:defaultValue="true"
+          />
+
+   </PreferenceCategory>
+
+   <PreferenceCategory
+       android:title="Transaction amount approved">
+
+      <SwitchPreferenceCompat
+          android:key="amountapprovedkey"
+          android:title=""
+          android:summary="Toggle to turn ON/OFF for transaction amount approved notification sound"
+          android:defaultValue="true"
+          />
+
+   </PreferenceCategory>
+
+   <PreferenceCategory
+       android:title="Transaction details updated">
+
+      <SwitchPreferenceCompat
+          android:key="transactionupdatedkey"
+          android:title=""
+          android:summary="Toggle to turn ON/OFF for transaction details updated notification sound"
+          android:defaultValue="true"
+          />
+
+   </PreferenceCategory>
+
+   <PreferenceCategory
+       android:title="Transaction attachment deleted">
+
+      <SwitchPreferenceCompat
+          android:key="transactionattachmentdeletedkey"
+          android:title=""
+          android:summary="Toggle to turn ON/OFF for transaction attachment deleted notification sound"
+          android:defaultValue="true"
+          />
+
+   </PreferenceCategory>
+
+
+</androidx.preference.PreferenceScreen>
